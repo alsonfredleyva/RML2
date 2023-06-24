@@ -2,14 +2,14 @@ import { createContext, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Grid, makeStyles } from "@material-ui/core";
 
-import Welcome, { ErrorPage } from "./component/Welcome";
+import Welcomehome from "./component/Welcomehome/Welcomehome";
 import Navbar from "./component/Navbar";
 import Login from "./component/Login";
 import Logout from "./component/Logout";
 import Signup from "./component/Signup";
 import Home from "./component/Home";
-import Applications from "./component/Applications";
-import Profile from "./component/Profile";
+import Applications from "./component/candidate/Applications";
+import Profile from "./component/candidate/Profile";
 import CreateJobs from "./component/recruiter/CreateJobs";
 import MyJobs from "./component/recruiter/MyJobs";
 import JobApplications from "./component/recruiter/JobApplications";
@@ -17,6 +17,7 @@ import AcceptedApplicants from "./component/recruiter/AcceptedApplicants";
 import RecruiterProfile from "./component/recruiter/Profile";
 import MessagePopup from "./lib/MessagePopup";
 import isAuth, { userType } from "./lib/isAuth";
+// import Portfolio from './component/candidate/Portfolio/src/pages/App';
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -49,8 +50,11 @@ function App() {
           </Grid>
           <Grid item className={classes.body}>
             <Switch>
+              {/* <Route exact path="/P">
+                <Portfolio />
+              </Route> */}
               <Route exact path="/">
-                <Welcome />
+                <Welcomehome />
               </Route>
               <Route exact path="/login">
                 <Login />
@@ -85,9 +89,6 @@ function App() {
               </Route>
               <Route exact path="/employees">
                 <AcceptedApplicants />
-              </Route>
-              <Route>
-                <ErrorPage />
               </Route>
             </Switch>
           </Grid>
