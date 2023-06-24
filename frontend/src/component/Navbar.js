@@ -80,6 +80,7 @@ const Navbar = (props) => {
               <Button color="inherit" onClick={() => handleClick("/logout")}>
                 Logout
               </Button>
+
             </>
           )
         ) : (
