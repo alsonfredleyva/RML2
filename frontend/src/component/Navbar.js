@@ -9,7 +9,6 @@ import { useHistory } from "react-router-dom";
 
 import isAuth, { userType } from "../lib/isAuth";
 import Profile from './recruiter/Profile';
-// import Portfolio from './candidate/Portfolio/src/pages/Portfolio';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +35,7 @@ const Navbar = (props) => {
     <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          <Button color="inherit" onClick={() => handleClick("/")}>GetJob</Button>
+          <Button color="inherit" onClick={() => handleClick("/")}>JOBSEARCH</Button>
         </Typography>
         {isAuth() ? (
           userType() === "recruiter" ? (
@@ -73,9 +72,6 @@ const Navbar = (props) => {
               </Button>
               <Button color="inherit" onClick={() => handleClick("/profile")}>
                 Profile
-              </Button>
-              <Button color="inherit" >
-                <a href="http://localhost:3002/">Portfolio</a>
               </Button>
               <Button color="inherit" onClick={() => handleClick("/logout")}>
                 Logout

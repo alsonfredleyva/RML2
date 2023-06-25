@@ -38,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
   jobTileOuter: {
-    padding: "30px",
-    margin: "20px 0",
+    padding: "10px",
+    margin: "10px 0",
     boxSizing: "border-box",
     width: "100%",
   },
@@ -111,7 +111,7 @@ const JobTile = (props) => {
             <Rating value={job.rating !== -1 ? job.rating : null} readOnly />
           </Grid>
           <Grid item>Role : {job.jobType}</Grid>
-          <Grid item>Salary : &#8377; {job.salary} per month</Grid>
+          <Grid item>Salary : ${job.salary} per month</Grid>
           <Grid item>
             Duration :{" "}
             {job.duration !== 0 ? `${job.duration} month` : `Flexible`}
